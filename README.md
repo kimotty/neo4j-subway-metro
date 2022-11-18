@@ -103,6 +103,13 @@ MATCH (s),(n) WHERE s.station_name="表参道" AND n.station_name="青山一丁�
 
 ```
 
+- match
+```
+match p=(n)-[r:GINZA*1..]->(m) where n.station_name='渋谷' and m.station_name='三越前' return p
+match p=(n)-[r:HANZOUMON*1..]->(m) where n.station_name='渋谷' and m.station_name='三越前' return p
+
+```
+
 - delete 
 ```
 match(n:G00)-[r]->(m) delete  n,r,m
