@@ -31,47 +31,47 @@ ST031,Z00,Z11,清澄白河
 
 ```
 # data --relationship
-:TYPE,station_src,station_dst
-GINZA-LINE, 渋谷,表参道
-GINZA-LINE, 表参道,外苑前
-GINZA-LINE, 外苑前,青山一丁目
-GINZA-LINE, 青山一丁目,赤坂見附
-GINZA-LINE, 赤坂見附,溜池山王
-GINZA-LINE, 溜池山王,虎ノ門
-GINZA-LINE, 虎ノ門,新橋
-GINZA-LINE, 新橋,銀座
-GINZA-LINE, 銀座,京橋
-GINZA-LINE, 京橋,日本橋
-GINZA-LINE, 日本橋,三越前
-GINZA-LINE, 表参道,渋谷
-GINZA-LINE, 外苑前,表参道
-GINZA-LINE, 青山一丁目,外苑前
-GINZA-LINE, 赤坂見附,青山一丁目
-GINZA-LINE, 溜池山王,赤坂見附
-GINZA-LINE, 虎ノ門,溜池山王
-GINZA-LINE, 新橋,虎ノ門
-GINZA-LINE, 銀座,新橋
-GINZA-LINE, 京橋,銀座
-GINZA-LINE, 日本橋,京橋
-GINZA-LINE, 三越前,日本橋
-HANZOUMON-LINE, 渋谷,表参道
-HANZOUMON-LINE, 表参道,青山一丁目
-HANZOUMON-LINE, 青山一丁目,永田町
-HANZOUMON-LINE, 永田町,半蔵門
-HANZOUMON-LINE, 半蔵門,九段下
-HANZOUMON-LINE, 九段下,神保町
-HANZOUMON-LINE, 神保町,大手町
-HANZOUMON-LINE, 大手町,水天宮前
-HANZOUMON-LINE, 水天宮前,清澄白河
-HANZOUMON-LINE, 表参道,渋谷
-HANZOUMON-LINE, 青山一丁目,表参道
-HANZOUMON-LINE, 永田町,青山一丁目
-HANZOUMON-LINE, 半蔵門,永田町
-HANZOUMON-LINE, 九段下,半蔵門
-HANZOUMON-LINE, 神保町,九段下
-HANZOUMON-LINE, 大手町,神保町
-HANZOUMON-LINE, 水天宮前,大手町
-HANZOUMON-LINE, 清澄白河,水天宮前
+:TYPE,station_src,station_dst,cost
+GINZA, 渋谷,表参道,1
+GINZA, 表参道,外苑前,1
+GINZA, 外苑前,青山一丁目,1
+GINZA, 青山一丁目,赤坂見附,3
+GINZA, 赤坂見附,溜池山王,3
+GINZA, 溜池山王,虎ノ門,3
+GINZA, 虎ノ門,新橋,3
+GINZA, 新橋,銀座,3
+GINZA, 銀座,京橋,3
+GINZA, 京橋,日本橋,4
+GINZA, 日本橋,三越前,4
+GINZA, 表参道,渋谷,1
+GINZA, 外苑前,表参道,1
+GINZA, 青山一丁目,外苑前,1
+GINZA, 赤坂見附,青山一丁目,3
+GINZA, 溜池山王,赤坂見附,3
+GINZA, 虎ノ門,溜池山王,3
+GINZA, 新橋,虎ノ門,3
+GINZA, 銀座,新橋,3
+GINZA, 京橋,銀座,3
+GINZA, 日本橋,京橋,4
+GINZA, 三越前,日本橋,4
+HANZOUMON, 渋谷,表参道,1
+HANZOUMON, 表参道,青山一丁目,1
+HANZOUMON, 青山一丁目,永田町,2
+HANZOUMON, 永田町,半蔵門,3
+HANZOUMON, 半蔵門,九段下,3
+HANZOUMON, 九段下,神保町,3
+HANZOUMON, 神保町,大手町,2
+HANZOUMON, 大手町,水天宮前,4
+HANZOUMON, 水天宮前,清澄白河,4
+HANZOUMON, 表参道,渋谷,1
+HANZOUMON, 青山一丁目,表参道,1
+HANZOUMON, 永田町,青山一丁目,2
+HANZOUMON, 半蔵門,永田町,3
+HANZOUMON, 九段下,半蔵門,3
+HANZOUMON, 神保町,九段下,3
+HANZOUMON, 大手町,神保町,2
+HANZOUMON, 水天宮前,大手町,4
+HANZOUMON, 清澄白河,水天宮前,4
 
 ```
 
