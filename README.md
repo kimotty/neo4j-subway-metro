@@ -6,7 +6,7 @@
 
 - data
 ```
-# data --node
+# data --node G00=GINZA-LINE, Z00=HANZOUMON-LINE
 :ID,:LABLE,station_code,station_name,
 ST001,G00:Z00,G01:Z01,渋谷
 ST002,G00:Z00,G02:Z02,表参道
@@ -75,9 +75,9 @@ HANZOUMON-LINE, 清澄白河,水天宮前
 
 ```
 
-- cypher
+- cypher node
 ```
-# cypher
+# cypher node
 CREATE (n:G00:Z00 {station_code: "G01:Z01", station_name : "渋谷"} )
 CREATE (n:G00:Z00 {station_code: "G02:Z02", station_name : "表参道"} )
 CREATE (n:G00 {station_code: "G03", station_name : "外苑前"} )
@@ -85,3 +85,12 @@ CREATE (n:G00:Z00 {station_code: "G04:Z03", station_name : "青山一丁目"} )
 
 ```
 
+- cypher relationship
+```
+# cypher relationship
+MATCH (s:G00:Z00),(n:G00:Z00) WHERE s.station_name="渋谷" AND n.station_name="表参道" CREATE (s)->[:HANZOUMON-LINE]->(n);
+MATCH (s:G00:Z00),(n:G00) WHERE s.station_name="表参道" AND n.station_name="外苑前" CREATE (s)->[:HANZOUMON-LINE]->(n);
+
+MATCH (s:G00:Z00),(n:G00:Z00) WHERE s.station_name="表参道" AND n.station_name="渋谷" CREATE (s)->[:HANZOUMON-LINE]->(n);
+
+```
