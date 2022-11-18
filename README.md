@@ -82,15 +82,19 @@ CREATE (n:G00:Z00 {station_code: "G01:Z01", station_name : "渋谷"} )
 CREATE (n:G00:Z00 {station_code: "G02:Z02", station_name : "表参道"} )
 CREATE (n:G00 {station_code: "G03", station_name : "外苑前"} )
 CREATE (n:G00:Z00 {station_code: "G04:Z03", station_name : "青山一丁目"} )
-
+...
 ```
 
 - cypher relationship
 ```
 # cypher relationship
-MATCH (s:G00:Z00),(n:G00:Z00) WHERE s.station_name="渋谷" AND n.station_name="表参道" CREATE (s)->[:HANZOUMON-LINE]->(n);
-MATCH (s:G00:Z00),(n:G00) WHERE s.station_name="表参道" AND n.station_name="外苑前" CREATE (s)->[:HANZOUMON-LINE]->(n);
+MATCH (s),(n) WHERE s.station_name="渋谷" AND n.station_name="表参道" CREATE (s)-[:GINZA{cost:1}]->(n);
+MATCH (s),(n) WHERE s.station_name="表参道" AND n.station_name="外苑前" CREATE (s)-[:GINZA{cost:2}]->(n);
+MATCH (s),(n) WHERE s.station_name="外苑前" AND n.station_name="青山一丁目" CREATE (s)-[:GINZA{cost:2}]->(n);
+...
 
-MATCH (s:G00:Z00),(n:G00:Z00) WHERE s.station_name="表参道" AND n.station_name="渋谷" CREATE (s)->[:HANZOUMON-LINE]->(n);
+MATCH (s),(n) WHERE s.station_name="渋谷" AND n.station_name="表参道" CREATE (s)-[:HANZOUMON{cost:2}]->(n);
+MATCH (s),(n) WHERE s.station_name="表参道" AND n.station_name="青山一丁目" CREATE (s)-[:HANZOUMON{cost:2}]->(n);
+...
 
 ```
