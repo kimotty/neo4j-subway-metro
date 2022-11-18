@@ -6,7 +6,7 @@
 
 - data
 ```
-# data
+# data --node
 :ID,:LABLE,station_code,station_name,
 ST001,G00:Z00,G01:Z01,渋谷
 ST002,G00:Z00,G02:Z02,表参道
@@ -27,6 +27,52 @@ ST027,Z00,Z07,神保町
 ST028,Z00,Z08,大手町
 ST030,Z00,Z10,水天宮前
 ST031,Z00,Z11,清澄白河
+```
+
+```
+# data --relationship
+:TYPE,station_src,station_dst
+GINZA-LINE, 渋谷,表参道
+GINZA-LINE, 表参道,外苑前
+GINZA-LINE, 外苑前,青山一丁目
+GINZA-LINE, 青山一丁目,赤坂見附
+GINZA-LINE, 赤坂見附,溜池山王
+GINZA-LINE, 溜池山王,虎ノ門
+GINZA-LINE, 虎ノ門,新橋
+GINZA-LINE, 新橋,銀座
+GINZA-LINE, 銀座,京橋
+GINZA-LINE, 京橋,日本橋
+GINZA-LINE, 日本橋,三越前
+GINZA-LINE, 表参道,渋谷
+GINZA-LINE, 外苑前,表参道
+GINZA-LINE, 青山一丁目,外苑前
+GINZA-LINE, 赤坂見附,青山一丁目
+GINZA-LINE, 溜池山王,赤坂見附
+GINZA-LINE, 虎ノ門,溜池山王
+GINZA-LINE, 新橋,虎ノ門
+GINZA-LINE, 銀座,新橋
+GINZA-LINE, 京橋,銀座
+GINZA-LINE, 日本橋,京橋
+GINZA-LINE, 三越前,日本橋
+HANZOUMON-LINE, 渋谷,表参道
+HANZOUMON-LINE, 表参道,青山一丁目
+HANZOUMON-LINE, 青山一丁目,永田町
+HANZOUMON-LINE, 永田町,半蔵門
+HANZOUMON-LINE, 半蔵門,九段下
+HANZOUMON-LINE, 九段下,神保町
+HANZOUMON-LINE, 神保町,大手町
+HANZOUMON-LINE, 大手町,水天宮前
+HANZOUMON-LINE, 水天宮前,清澄白河
+HANZOUMON-LINE, 表参道,渋谷
+HANZOUMON-LINE, 青山一丁目,表参道
+HANZOUMON-LINE, 永田町,青山一丁目
+HANZOUMON-LINE, 半蔵門,永田町
+HANZOUMON-LINE, 九段下,半蔵門
+HANZOUMON-LINE, 神保町,九段下
+HANZOUMON-LINE, 大手町,神保町
+HANZOUMON-LINE, 水天宮前,大手町
+HANZOUMON-LINE, 清澄白河,水天宮前
+
 ```
 
 - cypher
